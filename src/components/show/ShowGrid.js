@@ -17,7 +17,7 @@ const ShowGrid = ({data}) => {
         summary={show.summary}
         />
         ))}
-    </FLexGrid>
+    </FLexGrid >
 );
 };
 
