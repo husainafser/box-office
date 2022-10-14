@@ -2,10 +2,11 @@ import React from 'react'
 import ShowCard from './ShowCard'
 
  import IMAGE_NOT_FOUND from '../../images/images.jpg'
+import { FLexGrid } from '../styled';
 
 const ShowGrid = ({data}) => {
   return ( 
-  <div>
+  <FLexGrid>
       {
       data.map(({show})=>( 
         <ShowCard 
@@ -16,7 +17,7 @@ const ShowGrid = ({data}) => {
         summary={show.summary}
         />
         ))}
-    </div>
+    </FLexGrid>
 );
 };
 

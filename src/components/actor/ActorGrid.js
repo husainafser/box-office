@@ -1,11 +1,12 @@
 import React from 'react'
 
 import IMAGE_NOT_FOUND from '../../images/images.jpg'
+import { FLexGrid } from '../styled';
 import ActorCard from './ActorCard';
 
 const ActorGrid = ({data}) => {
   return ( 
-  <div>
+  <FLexGrid>
       {
       data.map(({person})=>( 
         <ActorCard 
@@ -18,7 +19,7 @@ const ActorGrid = ({data}) => {
         image={person.image ? person.image.medium : IMAGE_NOT_FOUND}     
         />
         ))}
-    </div>
+    </FLexGrid>
 );
 };
 
