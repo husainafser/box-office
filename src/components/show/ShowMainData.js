@@ -1,10 +1,10 @@
 import React from 'react'
-import IMG_PLACEHOLDER from "../../images/images.jpg";
+import IMAGE_NOT_FOUND from "../../images/images.jpg";
 import { Star } from '../styled';
 const ShowMainData = ({name, rating, summary, tags, image}) => {
   return (
     <div>
-      <img src={image ? image.original : IMG_PLACEHOLDER} alt="show cover" />
+      <img src={image ? image.original : IMAGE_NOT_FOUND} alt="show cover" />
         <div>
           <div>
           <h1>{name}</h1>
@@ -13,11 +13,11 @@ const ShowMainData = ({name, rating, summary, tags, image}) => {
         <span>{rating.average || 'N/A'}</span>
         </div>
       </div>
-      <div dangerouslySetInnerHTML={{__html: summary}} />
+      <div dangerouslySetInnerHTML={{__html: summary}} /> 
       <div>
         Tags:{' '}
         <div>
-          {tags.maps((tag, i)=>(
+          {tags.map((tag, i)=>(
             <span key={i}>{tag}</span>
           ))}
         </div>
@@ -25,6 +25,6 @@ const ShowMainData = ({name, rating, summary, tags, image}) => {
     </div>
     </div>
   );
-}
+};
 
-export default ShowMainData
+export default ShowMainData;

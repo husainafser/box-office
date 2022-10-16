@@ -43,7 +43,6 @@ const initialState={
           isMounted=false;
          };
     }, [id]);
-    console.log('show',show); 
     if (isLoading) {
         return (
             <div>
@@ -65,8 +64,7 @@ const initialState={
        name={show.name}
        rating={show.rating}
        summary={show.summary}
-       tags={show.genres}
-        />
+       tags={show.genres}  />
        <div>
         <h2>
           Details
@@ -77,13 +75,13 @@ const initialState={
         <h2>
           Seasons
         </h2>
-        <Seasons seasons={show.embedded.seasons} />
+        <Seasons seasons={show._embedded.seasons} />
        </div>
        <div>
         <h2>
           Cast
         </h2>
-        <Cast cast={show.embedded.cast} />
+        <Cast cast={show._embedded.cast} />
        </div>
      </div>
     
