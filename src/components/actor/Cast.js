@@ -1,25 +1,29 @@
 import React from 'react'
 import IMAGE_NOT_FOUND from "../../images/images.jpg";
+import { CastList } from '../show/Cast.styled';
 
 const Cast = ({cast}) => {
   return (
-    <div>
+    <CastList>
        {cast.map(({person, character, voice}, key)=>( 
-         <div key={key}>
-          <div>
+         <div key={key} className="cast-item">
+          <div className="pic-wrapper">
             <img 
              src={person.image ? person.image.medium : IMAGE_NOT_FOUND}
              alt="cast-person"
              />
           </div>
-          <div>
+          <div className="actor">
+            <span className="bold">
+              {person.name} 
+            </span>
             <span>
-              {person.name} | {character.name} {voice ? '| voice' : ''}
+            | {character.name} {voice ? '| voice' : ''}
             </span>
           </div>
          </div>
        ))}
-    </div>
+    </CastList>
   )
 }
 

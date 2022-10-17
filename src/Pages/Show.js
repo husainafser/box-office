@@ -6,6 +6,7 @@ import Details from '../components/actor/Details';
 import Seasons from '../components/actor/Seasons';
 import ShowMainData from '../components/show/ShowMainData';
 import { apiGet } from '../misc/config';
+import { InfoBlock, ShowPageWrapper } from './show.styled';
 const reducer = (prevState, action)=>{
   switch (action.type) {
     case 'FETCH_SUCCESS':{
@@ -58,32 +59,32 @@ const initialState={
           )
     }
    return (
-     <div>
+     <ShowPageWrapper>
        <ShowMainData 
        image={show.image}
        name={show.name}
        rating={show.rating}
        summary={show.summary}
        tags={show.genres}  />
-       <div>
+       <InfoBlock>
         <h2>
           Details
         </h2>
         <Details status={show.status} network={show.network} premeried={show.premeried} />
-       </div>
-       <div>
+       </InfoBlock>
+       <InfoBlock>
         <h2>
           Seasons
         </h2>
         <Seasons seasons={show._embedded.seasons} />
-       </div>
-       <div>
+       </InfoBlock>
+       <InfoBlock>
         <h2>
           Cast
         </h2>
         <Cast cast={show._embedded.cast} />
-       </div>
-     </div>
+       </InfoBlock>
+     </ShowPageWrapper>
     
    )
  }
