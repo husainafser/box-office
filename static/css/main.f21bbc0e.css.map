@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.f21bbc0e.css","mappings":"AAAA,KACI,+CAAqD,CACrD,cAAe,CACf,QAAU,CACV,gBACJ","sources":["index.css"],"sourcesContent":["body{\r\n    font-family: Georgia, 'Times New Roman', Times, serif;\r\n    font-size: 18px;\r\n    margin: 0%;\r\n    padding-top: 40px;\r\n}"],"names":[],"sourceRoot":""}
