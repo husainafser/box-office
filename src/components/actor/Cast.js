@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import IMAGE_NOT_FOUND from "../../images/images.jpg";
 import { CastList } from '../show/Cast.styled';
 

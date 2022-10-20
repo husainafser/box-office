@@ -6,7 +6,7 @@ const Details = ({status, premeried, network}) => {
     <DetailsWrapper>
       <p>Status: <span>{status}</span></p>
       <p>
-        Premeried {premeried} {network ? `en ${network.name}` : null}
+        Premeried {premeried} {network ? `on ${network.name}` : null}
       </p>
     </DetailsWrapper>
   );
