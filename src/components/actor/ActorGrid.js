@@ -14,7 +14,7 @@ const ActorGrid = ({data}) => {
         name={person.name} 
         country={person.country ? person.country.name : null}
         birthday={person.birthday}
-        deathday={person.birthday}
+        deathday={person.deathday}
         gender={person.gender}
         image={person.image ? person.image.medium : IMAGE_NOT_FOUND}     
         />
